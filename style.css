@@ -92,148 +92,6 @@ ul {
   color: var(--text-light);
 }
 
-/* ---------- CSS-drawn image placeholders (no external files) ---------- */
-.cat-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-}
-.cat-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(212,175,55,0.18), rgba(139,107,74,0.12));
-}
-.cat-img.chains { background: #f5e8d3; }
-.cat-img.rings  { background: #f3e9d8; }
-.cat-img.bangles{ background: #f5e8d3; }
-.cat-img.necklaces{ background: #f3e9d8; }
-.cat-img.haarams{ background: #f5e8d3; }
-.cat-img.drops  { background: #f3e9d8; }
-.cat-img.pendants{ background: #f5e8d3; }
-
-.featured-item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.featured-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(212,175,55,0.18), rgba(139,107,74,0.12));
-}
-.featured-item.chains   { background: #f5e8d3; }
-.featured-item.rings    { background: #f3e9d8; }
-.featured-item.bangles  { background: #f5e8d3; }
-.featured-item.necklaces{ background: #f3e9d8; }
-.featured-item.pendants { background: #f5e8d3; }
-
-.collection-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.collection-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(212,175,55,0.18), rgba(139,107,74,0.12));
-}
-.collection-card.layered-luxe   { background: #f3e9d8; }
-.collection-card.ethnic-glow    { background: #f5e8d3; }
-.collection-card.diamond-whisper{ background: #f3e9d8; }
-
-.hero-image {
-  width: 100%;
-  height: 450px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #f3e9d8, #e8dcc8);
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  overflow: hidden;
-}
-.hero-image::after {
-  content: "JJ";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Georgia", serif;
-  font-size: 120px;
-  font-weight: bold;
-  color: rgba(139,107,74,0.18);
-  letter-spacing: -4px;
-}
-
-.bridal-image {
-  width: 100%;
-  height: 450px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #f3e9d8, #e8dcc8);
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  overflow: hidden;
-}
-.bridal-image::after {
-  content: "JJ";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Georgia", serif;
-  font-size: 110px;
-  font-weight: bold;
-  color: rgba(139,107,74,0.18);
-  letter-spacing: -4px;
-}
-
-.divine-image {
-  width: 100%;
-  height: 450px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #f5e8d3, #e8dcc8);
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  overflow: hidden;
-}
-.divine-image::after {
-  content: "JJ";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Georgia", serif;
-  font-size: 110px;
-  font-weight: bold;
-  color: rgba(212,175,55,0.18);
-  letter-spacing: -4px;
-}
-
-.ruby-emerald-image {
-  width: 100%;
-  height: 450px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #f3e9d8, #e8dcc8);
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  overflow: hidden;
-}
-.ruby-emerald-image::after {
-  content: "JJ";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Georgia", serif;
-  font-size: 110px;
-  font-weight: bold;
-  color: rgba(139,107,74,0.18);
-  letter-spacing: -4px;
-}
-
 /* ---------- Header ---------- */
 .header {
   position: sticky;
@@ -506,9 +364,20 @@ ul {
   font-size: 15px;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 14px;
+/* Image styling - all images use  tags */
+.category-card img,
+.featured-item img,
+.collection-card img,
+.hero-image img,
+.bridal-image img,
+.divine-image img,
+.ruby-emerald-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: var(--transition);
+  display: block;
 }
 
 /* ---------- Collections ---------- */
@@ -536,6 +405,10 @@ ul {
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
 }
 
 .category-info {
@@ -584,6 +457,10 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
+.featured-item:hover img {
+  transform: scale(1.05);
+}
+
 .category-label {
   position: absolute;
   bottom: 20px;
@@ -620,6 +497,10 @@ ul {
 .collection-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+}
+
+.collection-card:hover img {
+  transform: scale(1.05);
 }
 
 .collection-content {
@@ -670,6 +551,13 @@ ul {
   align-items: center;
 }
 
+.bridal-image {
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
 .bridal-content .badge {
   display: inline-block;
   background: var(--primary);
@@ -703,6 +591,13 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
+}
+
+.divine-image {
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
 
 .divine-content .badge {
@@ -777,6 +672,13 @@ ul {
   align-items: center;
 }
 
+.ruby-emerald-image {
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
 .ruby-emerald-content h2 {
   font-size: 32px;
   color: var(--primary-dark);
@@ -786,6 +688,14 @@ ul {
 .ruby-emerald-content p {
   color: var(--text-light);
   font-size: 17px;
+}
+
+/* ---------- Hero image ---------- */
+.hero-image {
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
 
 /* ---------- Footer ---------- */
