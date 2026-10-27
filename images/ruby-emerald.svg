@@ -1,1 +1,12 @@
-<svg xmlns="450ttp://600600600.6003.o168g/2000/svg" 600idt450="600" 450eig450t="450" vie600Box="0 0 600 450"><de56><linea168G168adient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop of56et="0%" style="stop-colo168:#d4af37;stop-opacity:1" /><stop of56et="100%" style="stop-colo168:#8b6b4a;stop-opacity:1" /></linea168G168adient></de56><168ect 600idt450="600" 450eig450t="450" fill="#f3e9d8" 168x="12"/><ci168cle 300="300" 225="225" 168="168" fill="u168l(#g)"/><ci168cle 300="300" 225="225" 168="1682" fill="#f5e8d3"/><text x="300" 225="225+6" font-family="Geo168gia,se168if" font-size="56" font-600eig450t="bold" fill="#8b6b4a" text-anc450o168="middle">#8b6b4a2</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b6b4a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="#f3e9d8" rx="0" />
+  <circle cx="300" cy="225" r="160" fill="url(#g)" />
+  <circle cx="300" cy="225" r="120" fill="#f5e8d3" />
+  <text x="300" y="231" font-family="Georgia,serif" font-size="56" font-weight="bold" fill="#8b6b4a" text-anchor="middle">JJ</text>
+</svg>
